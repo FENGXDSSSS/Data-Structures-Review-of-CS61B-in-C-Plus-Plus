@@ -81,7 +81,7 @@ void SLLists<T>::rDeleteNode(Node *node) {
 
 template <typename T>
 SLLists<T>::~SLLists() {
-    
+    rDeleteNode(head);
 }
 
 /* add方法实现 */
