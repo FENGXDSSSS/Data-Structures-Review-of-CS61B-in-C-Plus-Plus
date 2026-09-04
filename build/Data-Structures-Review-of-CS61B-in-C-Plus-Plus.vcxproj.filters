@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClCompile Include="C:\FENG\Data-Structures-in-Cpp\Data-Structures-Review-of-CS61B-in-C-Plus-Plus\Data-Structures-Review-of-CS61B-in-C-Plus-Plus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="C:\FENG\Data-Structures-in-Cpp\Data-Structures-Review-of-CS61B-in-C-Plus-Plus\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{B9EFB9DA-852B-34A6-879C-2AA3682FAB4A}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

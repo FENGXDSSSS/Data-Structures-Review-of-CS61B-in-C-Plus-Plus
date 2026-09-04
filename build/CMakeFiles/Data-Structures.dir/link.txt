@@ -1,0 +1,2 @@
+C:\mingw64\bin\ar.exe qc libData-Structures.a "CMakeFiles/Data-Structures.dir/Data-Structures-Review-of-CS61B-in-C-Plus-Plus.cpp.obj"
+C:\mingw64\bin\ranlib.exe libData-Structures.a
