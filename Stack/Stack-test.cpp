@@ -10,8 +10,8 @@ int main(void) {
     }
     std::cout << stack.peek() << std::endl;
     std::cout << stack.pop() << std::endl;
-    std::cout << stack.getSize() <<std
-    std::cout << stack.isEmpty() << std::endl;::endl;
+    std::cout << stack.getSize() <<std::endl;
+    std::cout << stack.isEmpty() << std::endl;
     for (int i = 1; i <= 99; i++) {
         stack.pop();
     }
