@@ -8,7 +8,7 @@ _φ_(．．) Review…
 
 1. SLLists 单链表 ✔️
 2. ALists 数组列表 ✔️
-3. Stack 栈
+3. Stack 栈 ✔️
 4. Queue 队列
 5. DeQue 双端队列
 6. Disjoint Sets 并查集
