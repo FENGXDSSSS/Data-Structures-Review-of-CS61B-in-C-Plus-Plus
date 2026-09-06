@@ -12,7 +12,7 @@ _φ_(．．) Review…
 4. Queue 队列 ✔️
 5. DeQue 双端队列 ✔️
 6. Disjoint Sets 并查集 ✔️
-7. BST 二叉搜索树
+7. BST 二叉搜索树 ✔️
 8. LLRT 左倾红黑树
 9. Heap 堆
 10. Priority Queue 快速队列
