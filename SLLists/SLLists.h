@@ -21,6 +21,10 @@ public:
     inline
     void addFirst(T data); // 添加到表头
     
+    // 中间插入链表节点
+    inline 
+    void insert(T data, int index);
+    
     // 获取链表节点
     T get(int n);
 
@@ -114,6 +118,25 @@ void SLLists<T>::addFirst(T data) {
     Node* tempNode = head->getNext();
     head->setNext(new Node(data, tempNode));
     size += 1;
+    return;
+}
+
+/* insert方法实现*/
+template <typename T>
+void SLLists<T>::insert(T data, int index) {
+    Node* node = head;
+    if (index > getSize()) {
+        throw std::out_of_range("SLList::insert() : Index out of range");
+    }
+    while (index > 0) {
+       node = node->getNext();
+       index -= 1;
+    }
+    Node* nextNode = node->getNext(); // 如果是最后元素，获取的nextNode 为 nullptr 因此无需考虑末尾插入的特殊情况
+    node->setNext(new Node(data, nextNode));
+
+    size += 1;
+    
     return;
 }
 
