@@ -1,9 +1,10 @@
 #ifndef __SLLists__
 #define __SLLists__
 
-// 单链表的实现
-#include <iostream>
+// 顺序表链表实现
+
 #include <stdexcept>
+
 template <typename T>
 class SLLists {
     // 公共方法(对外接口)
@@ -26,10 +27,10 @@ public:
     void insert(T data, int index);
     
     // 获取链表节点
-    T get(int n);
+    T get(int n) const;
 
     // 返回链表的项目的大小
-    int getSize();
+    int getSize () const;
     
 private:
     // 嵌套类，链表节点
@@ -50,7 +51,7 @@ private:
     private:
         // 下一个节点，存放下一个节点的地址
         Node *next;
-        // 数据
+        // 数据实体
         T data;
     };
     int size; // 当前容量
@@ -118,7 +119,7 @@ void SLLists<T>::addFirst(T data) {
     Node* tempNode = head->getNext();
     head->setNext(new Node(data, tempNode));
     size += 1;
-    return;
+    return; 
 }
 
 /* insert方法实现*/
@@ -142,7 +143,7 @@ void SLLists<T>::insert(T data, int index) {
 
 /* get方法实现 */
 template <typename T>
-T SLLists<T>::get(int n) {
+T SLLists<T>::get(int n) const {
     if (n >= size) {
         throw std::out_of_range("SLLists::get() : Index out of range");
     }
@@ -159,7 +160,7 @@ T SLLists<T>::get(int n) {
 
 /* getSize方法实现 */
 template <typename T> 
-int SLLists<T>::getSize() {
+int SLLists<T>::getSize() const {
     return this->size;
 }
 

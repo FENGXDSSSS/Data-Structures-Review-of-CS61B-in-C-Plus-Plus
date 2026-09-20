@@ -3,16 +3,27 @@
 
 int main(void) {
     SLLists<int> testList = SLLists<int>();
-    testList.addFirst(1); // index == 0 size == 1
-    testList.addLast(2); // index == 1 size == 2
-    std::cout << testList.get(0) << std::endl << testList.get(1) << std::endl;
-    testList.insert(3, 1); // index == 1 size == 3
-    std::cout << testList.get(1) << " " << testList.get(2) << std::endl; // 3 2
-    testList.insert(4, 0); // index == 0 size == 4
-    std::cout << testList.get(0) << " " << testList.get(1) << std::endl; // 4 1
-    std::cout << "Size: " << testList.getSize() << std::endl;
-    testList.insert(5,4); // index == 5 size == 5
-    std::cout << testList.get(4) << " " << std::endl; // 5
-    testList.insert(6, 10);
+    
+    for (int i = 0; i < 4; i++) {
+        testList.addLast(i * 2);
+    }
+    
+    for (int i = 0; i < testList.getSize(); i++) {
+        std::cout << testList.get(i) << " ";
+    }
+    std::cout << std::endl;
+
+    SLLists<int> testList2 = SLLists<int>();
+    for (int i = 1; i < 4; i++) {
+        testList2.addLast(i);
+    }
+    for (int i = 0; i < testList2.getSize(); i++) {
+        std::cout << testList2.get(i) << " ";
+    }
+    std::cout << std::endl;
+    
+    
+
+
     testList.get(1);
 }
