@@ -1,8 +1,8 @@
+
 #ifndef __SLLists__
 #define __SLLists__
 
 // 顺序表链表实现
-
 #include <stdexcept>
 
 template <typename T>
@@ -31,7 +31,8 @@ public:
 
     // 返回链表的项目的大小
     int getSize () const;
-    
+
+    static SLLists<T> merge(SLLists<T> a, SLLists<T> b);
 private:
     // 嵌套类，链表节点
     struct Node {
@@ -58,7 +59,40 @@ private:
     Node* head; // 哨兵节点
     /* SLLists的辅助方法 */
     void rDeleteNode(Node *node);
+
+    
 };
+// 静态函数类外定义不需要static关键字
+template <typename T>
+SLLists<T> SLLists<T>::merge(SLLists<T> a, SLLists<T> b) {
+    SLLists<T> c;
+    int i = 0, j = 0;
+    T aItem, bItem;
+    while (a.getSize() > i && b.getSize() > j) {
+        aItem = a.get(i);
+        bItem = b.get(j);
+        if (aItem < bItem) {
+            c.addLast(aItem);
+            i += 1;
+        } else {
+            c.addLast(bItem);
+            j += 1;
+        }
+    }
+    
+    while (a.getSize() > i) {
+        c.addLast(aItem);
+        i += 1;
+    }
+
+    while (b.getSize() > j) {
+        c.addLast(bItem);
+        j += 1;
+    }
+
+    return c;
+}
+
 // --------------------------------------------SLLists成员方法实现----------------------------------------- //
 /* SLLists 构造函数实现 */
 template <typename T>
