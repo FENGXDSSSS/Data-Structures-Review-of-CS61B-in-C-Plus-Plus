@@ -2,6 +2,7 @@
 #include <stdexcept>
 #include <vector>
 #include "Graphs.h"
+#include <algorithm>
 
 class DFPaths {
 private:
@@ -12,15 +13,17 @@ private:
     void dfs(Graph G, int s);
 public:
     inline
-    DFPaths(Graph G, int v);
+    DFPaths(const Graph& G, int v);
     inline
-    std::vector<int>& pathTo(int v);
+    std::vector<int> pathTo(int v);
     inline
     bool hasPathTo(int v);
 };
 
 inline
-DFPaths::DFPaths(Graph G, int s) {
+DFPaths::DFPaths(const Graph& G, int s) {
+    markTo = std::vector<bool>(G.V());
+    edgeTo = std::vector<int>(G.V());    
     this->s = s;
     dfs(G, s);
 }
@@ -37,9 +40,9 @@ void DFPaths::dfs(Graph G, int v) {
 }
 
 inline
-std::vector<int>& DFPaths::pathTo(int v) {
+std::vector<int> DFPaths::pathTo(int v) {
     path.clear();
-    if (hasPathTo(v)) {
+    if (!hasPathTo(v)) {
         throw std::out_of_range("DFPaths::pathTo: not hasPathTo");
     }
     int x = 0;

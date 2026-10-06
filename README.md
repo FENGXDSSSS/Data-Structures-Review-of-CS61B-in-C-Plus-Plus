@@ -18,7 +18,7 @@ _φ_(．．) Review…
 10. Priority Queue 优先队列 ✔️
 11. Hash Map 哈希表 ✔️
 12. DisjointSet 并查集
-13. Graph 图
+13. Graph 图 ✔️
 14. QueTree 四叉树
-15. K-D Tree KD树
-16. Trie 字典树
+15. K-D Tree KD树 ✔️
+16. Trie 字典树 ✔️

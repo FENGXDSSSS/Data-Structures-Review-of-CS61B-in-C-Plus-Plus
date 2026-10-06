@@ -17,7 +17,7 @@ int main(void) {
     }
     double end = clock();
     std::cout << "put:" << std::endl;
-    std::cout << "Êý¾ÝÁ¿1000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+    std::cout << "æ•°æ®é‡1000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
     
     srand(time(0));  
     start = clock();
@@ -25,7 +25,7 @@ int main(void) {
         b.put(rand() % 10000);
     }
     end = clock();
-    std::cout << "Êý¾ÝÁ¿10000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+    std::cout << "æ•°æ®é‡10000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
 
     srand(time(0));  
     start = clock();
@@ -33,7 +33,7 @@ int main(void) {
         c.put(rand() % 100000);
     }
     end = clock();
-    std::cout << "Êý¾ÝÁ¿100000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+    std::cout << "æ•°æ®é‡100000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
 
     srand(time(0));  
     start = clock();
@@ -41,7 +41,7 @@ int main(void) {
         d.put(rand() % 1000000);
     }
     end = clock();
-    std::cout << "Êý¾ÝÁ¿1000000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+    std::cout << "æ•°æ®é‡1000000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
 
     srand(time(0));  
     start = clock();
@@ -49,7 +49,7 @@ int main(void) {
         e.put(rand() % 10000000);
     }
     end = clock();
-    std::cout << "Êý¾ÝÁ¿10000000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+    std::cout << "æ•°æ®é‡10000000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
 
     //---------------------------------------removeMin----------------------------------------//
     srand(time(0));  
@@ -59,7 +59,7 @@ int main(void) {
     }
     end = clock();
     std::cout << "removeMin:" << std::endl;
-    std::cout << "Êý¾ÝÁ¿1000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+    std::cout << "æ•°æ®é‡1000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
 
     srand(time(0));  
     start = clock();
@@ -67,7 +67,7 @@ int main(void) {
         b.removeMin();
     }
     end = clock();
-    std::cout << "Êý¾ÝÁ¿10000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+    std::cout << "æ•°æ®é‡10000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
 
     srand(time(0));  
     start = clock();
@@ -75,7 +75,7 @@ int main(void) {
         c.removeMin();
     }
     end = clock();
-    std::cout << "Êý¾ÝÁ¿100000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+    std::cout << "æ•°æ®é‡100000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
 
     srand(time(0));  
     start = clock();
@@ -83,7 +83,7 @@ int main(void) {
         d.removeMin();
     }
     end = clock();
-    std::cout << "Êý¾ÝÁ¿1000000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+    std::cout << "æ•°æ®é‡1000000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
 
     srand(time(0));  
     start = clock();
@@ -91,7 +91,7 @@ int main(void) {
         e.removeMin();
     }
     end = clock();
-    std::cout << "Êý¾ÝÁ¿10000000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
+    std::cout << "æ•°æ®é‡10000000: " << (double)(end - start) / CLOCKS_PER_SEC << std::endl;
     
     return 0;
 }

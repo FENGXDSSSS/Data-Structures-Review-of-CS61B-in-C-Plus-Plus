@@ -15,57 +15,57 @@ int main(void) {
         a.put(i, i);
     }
     double end =clock();
-    cout << "Êý¾ÝÁ¿100000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+    cout << "æ•°æ®é‡100000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
 
     start = clock();
     for (int i = 0; i < 1000000; i += 1) {
         b.put(i, i);
     }
     end = clock();
-    cout << "Êý¾ÝÁ¿1000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+    cout << "æ•°æ®é‡1000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
     
     start = clock();
     for (int i = 0; i < 10000000; i += 1) {
         c.put(i, i);
     }
     end = clock();
-    cout << "Êý¾ÝÁ¿10000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+    cout << "æ•°æ®é‡10000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
     
     start = clock();
     for (int i = 0; i < 100000000; i += 1) {
         d.put(i, i);
     }
     end = clock();
-    cout << "Êý¾ÝÁ¿100000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+    cout << "æ•°æ®é‡100000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
 
-    // ------------------É¾³ý-----------------//
+    // ------------------åˆ é™¤-----------------//
     start = clock();
     for (int i = 0; i < 100000; i += 1) {
         a.remove(i);
     }
     end = clock();
-    cout << "Êý¾ÝÁ¿100000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+    cout << "æ•°æ®é‡100000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
 
     start = clock();
     for (int i = 0; i < 1000000; i += 1) {
         b.remove(i);
     }
     end = clock();
-    cout << "Êý¾ÝÁ¿1000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+    cout << "æ•°æ®é‡1000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
 
     start = clock();
     for (int i = 0; i < 10000000; i += 1) {
         c.remove(i);
     }
     end = clock();
-    cout << "Êý¾ÝÁ¿10000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+    cout << "æ•°æ®é‡10000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
 
     start = clock();
     for (int i = 0; i < 100000000; i += 1) {
         d.remove(i);
     }
     end = clock();
-    cout << "Êý¾ÝÁ¿100000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+    cout << "æ•°æ®é‡100000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
 
     unordered_map<int, int> aa;
     start = clock();
@@ -73,12 +73,12 @@ int main(void) {
         aa[i] = i;
     }
     end = clock();
-    cout << "±ê×¼¿âmapÊý¾ÝÁ¿100000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+    cout << "æ ‡å‡†åº“mapæ•°æ®é‡100000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
 
     start = clock();
     for (int i = 0; i < 100000000; i += 1) {
         aa.erase(i);
     }
     end = clock();
-    cout << "±ê×¼¿âmap eraseÊý¾ÝÁ¿100000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
+    cout << "æ ‡å‡†åº“map eraseæ•°æ®é‡100000000: " << (double)(end - start) / CLOCKS_PER_SEC << endl;
 }

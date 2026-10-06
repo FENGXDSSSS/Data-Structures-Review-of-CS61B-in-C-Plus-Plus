@@ -2,6 +2,7 @@
 #include <stdexcept>
 #include <vector>
 #include "Graphs.h"
+#include <algorithm>
 #include <deque>
 
 class BFPaths {
@@ -16,13 +17,15 @@ public:
     inline
     BFPaths(Graph G, int V);
     inline
-    std::vector<int>& pathTo(int v);
+    std::vector<int> pathTo(int v);
     inline
     bool hasPathTo(const int& v) { return markTo[v]; }
 };
 
 inline
 BFPaths::BFPaths(Graph G, int s) {
+    markTo = std::vector<bool>(G.V());
+    edgeTo = std::vector<int>(G.V());
     this->s = s;
     bfs(G, s);
 }
@@ -46,7 +49,7 @@ void BFPaths::bfs(Graph G, int v) {
 }
 
 inline
-std::vector<int>& BFPaths::pathTo(int v) {
+std::vector<int> BFPaths::pathTo(int v) {
     path.clear();
     if (hasPathTo(v)) {
         throw std::out_of_range("BFPaths::pathTo: not hasPathTo");

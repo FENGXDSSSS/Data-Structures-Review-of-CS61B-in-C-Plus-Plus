@@ -1,10 +1,12 @@
+#pragma once 
+
 // 无向图
 #include <stdexcept>
 #include <vector>
 #include <ostream>
 
 class Graph {
-private:
+protected:
     std::vector<std::vector<int>> adjList;
     int _V; // number of vertexs
     int _E; // number of edges
@@ -14,14 +16,14 @@ public:
     Graph(int V);
     // 添加边
     inline
-    void addEdge(int fVertex, int sVertex);
+    virtual void addEdge(int fVertex, int sVertex);
     // 获取指定节点的edges列表
     inline
     std::vector<int>& adj(int vertex);
     inline
-    int V() { return _V; }
+    int V() const { return _V; }
     inline
-    int E() { return _E; }
+    int E() const { return _E; }
     friend std::ostream& operator << (std::ostream& os, Graph graph);
 };
 
